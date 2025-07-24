@@ -5,6 +5,7 @@ import portfolioImage from "../../public/sameer-portfolio-image.png";
 import megaMallImage from "../../public/mega-mall-image.png";
 import trueFeedbackImage from "../../public/true-feedback-image.png"
 import Image from "next/image";
+import Link from "next/link";
 
 interface Project {
   title: string;
@@ -202,10 +203,21 @@ export default function ProjectsSection() {
                         </span>
                       ))}
                       {project.technologies.length > 3 && (
+                       <>
                         <span className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded">
                           +{project.technologies.length - 3}
                         </span>
+                       
+                       </>
                       )}
+                       
+                    </div>
+                    <div className="w-full text-center p-[20px]">
+                      <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                        <button className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors duration-200 shadow-lg hover:shadow-xl">
+                          Explore
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </motion.div>
