@@ -21,44 +21,44 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Modern Portfolio Website",
-    description: "A responsive portfolio built with Next.js, TypeScript, and Framer Motion.",
-    longDescription: "A fully responsive portfolio website featuring modern design principles, dark/light mode toggle, smooth animations, and optimized performance. Built with the latest web technologies and best practices.",
+    title: "Sarah's Life Coaching Website",
+    description: "Complete website transformation for a life coach, including booking system and client portal.",
+    longDescription: "Sarah was struggling to attract clients with her outdated website. We created a modern, conversion-focused site with integrated booking system. Result: 300% increase in client bookings within 3 months.",
     image: portfolioImage.src,
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    liveLink: "https://sameer-dev.online",
-    githubLink: "https://github.com/sameer-dev-online/sameer-portfolio",
-    category: "Full-Stack",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Booking System"],
+    liveLink: "#",
+    githubLink: "#",
+    category: "Life Coaching",
     featured: true,
   },
   {
-    title: "Mega Mall",
-    description: "A comprehensive e-commerce platform built with Next.js, providing a seamless shopping experience for users and powerful management tools for administrators.",
-    longDescription: "Mega Mall is a modern, full-stack e-commerce platform designed to provide an exceptional shopping experience. Built with cutting-edge technologies, it offers a responsive design, intuitive user interface, and comprehensive administrative capabilities and also admin panel integrated where admin can manage the products and also can see the analytics of the website",
+    title: "Peak Performance Fitness Coaching",
+    description: "Professional website for a fitness trainer with client management and progress tracking features.",
+    longDescription: "Michael needed a website that could showcase his expertise and manage his growing client base. We built a comprehensive platform with client portals, progress tracking, and automated scheduling. His revenue doubled within 6 months.",
     image: megaMallImage.src,
-    technologies: ["Nextjs", "TypeScript", "Tailwind CSS", "React", "Framer Motion", "Node.js", "MongoDB", "Express"],
-    liveLink: "https://mega-mall.vercel.app/",
-    githubLink: "https://github.com/sameer-dev-online/mega-mall",
-    category: "Full-Stack",
+    technologies: ["React", "Node.js", "MongoDB", "Payment Integration"],
+    liveLink: "#",
+    githubLink: "#",
+    category: "Fitness Coaching",
     featured: true,
   },
-  
+
   {
-    title: "True Feedback - Anonymous Feedback Platform",
-    description: "True Feedback is a modern, secure platform for anonymous feedback and messaging. Built with Next.js 15 and leveraging AI capabilities, it allows users to send and receive anonymous messages in a safe, controlled environment.",
-    longDescription: "True-feedback is a modern, secure platform for anonymous feedback and messaging. Built with Next.js 15 and leveraging AI capabilities, it allows users to send and receive anonymous messages in a safe, controlled environment. It is designed to provide a secure and reliable channel for users to share their thoughts and opinions without fear of retribution or judgment. The platform is built with the latest web technologies and best practices, ensuring a seamless and efficient user experience.",
+    title: "Executive Leadership Coaching Platform",
+    description: "Premium website for executive coaching with advanced client management and assessment tools.",
+    longDescription: "James wanted to position himself as a premium executive coach. We created a sophisticated platform with assessment tools, client dashboards, and premium branding. He now attracts Fortune 500 clients regularly.",
     image: trueFeedbackImage.src,
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "shadCn", "NextAuth.js", "AI SDK, Groq API (LLaMA 3.1)"],
-    liveLink: "https://true-feedback-dun.vercel.app/",
-    githubLink: "https://github.com/sameer-dev-online/true-feedback",
-    category: "Full-Stack",
+    technologies: ["Next.js", "TypeScript", "Advanced Analytics", "Client Portal"],
+    liveLink: "#",
+    githubLink: "#",
+    category: "Executive Coaching",
     featured: true,
   },
-  
-  
+
+
 ];
 
-const categories = ["All", "Frontend", "Backend", "Full-Stack", "Mobile", "Open Source"];
+const categories = ["All", "Life Coaching", "Fitness Coaching", "Business Coaching", "Executive Coaching"];
 
 export default function ProjectsSection() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -105,16 +105,16 @@ export default function ProjectsSection() {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              Featured <span className="gradient-text">Projects</span>
+              Success <span className="gradient-text">Case Studies</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A showcase of my recent work and contributions to the development community
+              Real results from coaches and trainers who transformed their businesses with our websites
             </p>
           </motion.div>
 
-          {/* Featured Projects */}
+          {/* Featured Case Studies */}
           <motion.div variants={itemVariants} className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Highlighted Work</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center">Client Transformations</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredProjects.map((project, index) => (
                 <motion.div
@@ -213,11 +213,18 @@ export default function ProjectsSection() {
                        
                     </div>
                     <div className="w-full text-center p-[20px]">
-                      <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                        <button className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors duration-200 shadow-lg hover:shadow-xl">
-                          Explore
-                        </button>
-                      </Link>
+                      <motion.a
+                        href="#contact"
+                        className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors duration-200 shadow-lg hover:shadow-xl inline-block"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                      >
+                        Get Similar Results
+                      </motion.a>
                     </div>
                   </div>
                 </motion.div>

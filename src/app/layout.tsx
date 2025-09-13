@@ -17,21 +17,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://sameer-dev.online'),
   title: {
-    default: "Sameer Dev | Full-Stack MERN + Next.js Developer",
+    default: "Sameer Dev | Professional Websites for Coaches & Trainers",
     template: "%s | Sameer Dev"
   },
-  description: "Passionate full-stack developer specializing in MERN stack and Next.js. Creating modern, scalable web applications with exceptional user experiences.",
+  description: "Transform your coaching business with a professional website. We specialize in creating conversion-focused websites for coaches and trainers that attract more clients and grow revenue.",
   keywords: [
-    "Full-Stack Developer",
-    "MERN Stack",
-    "Next.js",
-    "React",
-    "Node.js",
-    "TypeScript",
-    "Web Development",
-    "Frontend",
-    "Backend",
-    "JavaScript"
+    "Coach Website Design",
+    "Trainer Website Development",
+    "Coaching Business Website",
+    "Professional Coach Website",
+    "Life Coach Website",
+    "Business Coach Website",
+    "Fitness Trainer Website",
+    "Coaching Website Builder",
+    "Coach Marketing Website",
+    "Coaching Business Growth"
   ],
   authors: [{ name: "Sameer Dev" }],
   creator: "Sameer Dev",
@@ -51,25 +51,19 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://sameer-dev.online/",
-    title: "Sameer Dev | Full-Stack MERN + Next.js Developer",
-    description: "Passionate full-stack developer specializing in MERN stack and Next.js. Creating modern, scalable web applications with exceptional user experiences.",
-    siteName: "Sameer Dev Portfolio",
+    title: "Sameer Dev | Professional Websites for Coaches & Trainers",
+    description: "Transform your coaching business with a professional website. We specialize in creating conversion-focused websites for coaches and trainers that attract more clients and grow revenue.",
+    siteName: "Sameer Dev",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Sameer Dev - Full-Stack Developer Portfolio",
+        alt: "Sameer Dev - Professional Websites for Coaches & Trainers",
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Sameer Dev | Full-Stack MERN + Next.js Developer",
-    description: "Passionate full-stack developer specializing in MERN stack and Next.js. Creating modern, scalable web applications with exceptional user experiences.",
-    images: ["/og-image.jpg"],
-    creator: "@sameerdev",
-  },
+  
   verification: {
     google: "your-google-verification-code",
   },

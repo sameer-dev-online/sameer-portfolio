@@ -1,7 +1,9 @@
 import HomeSection from "../components/HomeSection";
-import AboutSection from "../components/AboutSection";
-import SkillsSection from "../components/SkillsSection";
+import ServicesSection from "../components/AboutSection";
+import WhyCoachesSection from "../components/WhyCoachesSection";
+import TestimonialsSection from "../components/SkillsSection";
 import ProjectsSection from "../components/ProjectsSection";
+import PricingSection from "../components/PricingSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 
@@ -9,9 +11,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <HomeSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
+      <ServicesSection />
+      <WhyCoachesSection />
+      <TestimonialsSection />
+      {/* <ProjectsSection /> */}
+      <PricingSection />
       <ContactSection />
       <Footer />
     </div>

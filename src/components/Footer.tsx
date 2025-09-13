@@ -60,8 +60,7 @@ export default function Footer() {
             >
               <h3 className="text-2xl font-bold gradient-text mb-4">Sameer Dev</h3>
               <p className="text-muted-foreground mb-6 max-w-md">
-                Full-Stack MERN + Next.js Web Developer passionate about creating
-                exceptional digital experiences that make a difference.
+                Full-Stack MERN + Next.js Web Developer helping coaches and educators build professional, engaging, and results-driven websites that inspire trust and attract clients.
               </p>
 
               <div className="space-y-2 text-center md:text-left">

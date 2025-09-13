@@ -1,9 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import devImage from "../../public/developer_image.png"
-import my_image from "../../public/my_profile_image.jpg"
-import Image from "next/image";
 
 export default function HomeSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -92,24 +89,24 @@ export default function HomeSection() {
         initial="hidden"
         animate="visible"
       >
-        {/* Profile Image Placeholder */}
+        {/* Business Visual */}
         <motion.div
           variants={itemVariants}
           className="mb-8"
         >
-          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary p-[2px]">
-            <div className="w-full h-full rounded-full bg-background overflow-hidden">
-              <Image
-                src={my_image}
-                alt="Profile picture of Sameer Dev"
-                width={128}
-                height={128}
-                className="w-full h-full object-fill"
-                priority
-              />
+          <div className="flex justify-center items-center gap-4 mb-6">
+            <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
+              <span className="text-2xl">🎯</span>
+            </div>
+            <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary p-[2px] rounded-full">
+              <div className="w-full h-full rounded-full bg-background overflow-hidden flex items-center justify-center">
+                <div className="text-3xl font-bold gradient-text">CWP</div>
+              </div>
+            </div>
+            <div className="w-16 h-16 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-full flex items-center justify-center">
+              <span className="text-2xl">🚀</span>
             </div>
           </div>
-
         </motion.div>
 
         {/* Main Heading */}
@@ -117,8 +114,8 @@ export default function HomeSection() {
           variants={itemVariants}
           className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight"
         >
-          Hi, I`m{" "}
-          <span className="gradient-text">Sameer Dev</span>
+          Transform Your Coaching Business with a{" "}
+          <span className="gradient-text">Professional Website</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -126,7 +123,7 @@ export default function HomeSection() {
           variants={itemVariants}
           className="text-xl sm:text-2xl md:text-3xl font-medium mb-8 text-muted-foreground"
         >
-          Full-Stack MERN + Next.js Developer
+          Web Development Services for Coaches & Trainers
         </motion.p>
 
         {/* Description */}
@@ -134,8 +131,8 @@ export default function HomeSection() {
           variants={itemVariants}
           className="text-lg sm:text-xl max-w-3xl mx-auto mb-12 text-muted-foreground leading-relaxed"
         >
-          I build modern, scalable web applications with a focus on clean code,
-          performance, and exceptional user experiences. Let`s create something amazing together.
+          Stop losing potential clients to competitors with outdated websites. Get a modern,
+          conversion-focused website that attracts your ideal clients and grows your coaching business 24/7.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -144,16 +141,16 @@ export default function HomeSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <motion.a
-            href="#projects"
+            href="#services"
             className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+              document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            View My Work
+            View Our Services
           </motion.a>
 
           <motion.a
@@ -166,7 +163,7 @@ export default function HomeSection() {
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            Get In Touch
+            Get Free Consultation
           </motion.a>
         </motion.div>
 
