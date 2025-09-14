@@ -106,14 +106,14 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-secondary/30">
+    <section id="testimonials" className="py-20 bg-secondary/30 scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.15 }}
           className="text-center mb-16"
         >
           <motion.h2
@@ -238,9 +238,8 @@ export default function TestimonialsSection() {
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      index === currentTestimonial ? 'bg-primary' : 'bg-muted-foreground/30'
-                    }`}
+                    className={`w-2 h-2 rounded-full transition-colors ${index === currentTestimonial ? 'bg-primary' : 'bg-muted-foreground/30'
+                      }`}
                   />
                 ))}
               </div>

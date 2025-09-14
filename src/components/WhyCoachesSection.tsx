@@ -76,13 +76,13 @@ export default function WhyCoachesSection() {
   ];
 
   return (
-    <section id="why-coaches" className="py-20 bg-secondary/30">
+    <section id="why-coaches" className="py-20 bg-secondary/30 scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.15 }}
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">

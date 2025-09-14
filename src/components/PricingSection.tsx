@@ -78,7 +78,7 @@ export default function PricingSection() {
         "CMS / Content upload (headless CMS or your own panel)",
         "Monthly maintenance plan (optional $50/month)",
         "if neccessary, Hosting + Domain setup (extra fee $99 per year) if required. "
-        
+
       ],
       popular: false,
       cta: "Go Premium",
@@ -87,13 +87,13 @@ export default function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-background">
+    <section id="pricing" className="py-20 bg-background scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.15 }}
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
@@ -111,11 +111,10 @@ export default function PricingSection() {
               <motion.div
                 key={plan.name}
                 variants={itemVariants}
-                className={`relative bg-card rounded-2xl p-8 border-2 transition-all duration-300 hover:shadow-xl ${
-                  plan.popular 
-                    ? 'border-primary shadow-lg scale-105' 
+                className={`relative bg-card rounded-2xl p-8 border-2 transition-all duration-300 hover:shadow-xl ${plan.popular
+                    ? 'border-primary shadow-lg scale-105'
                     : 'border-border hover:border-primary/50'
-                }`}
+                  }`}
                 whileHover={{ y: -5 }}
               >
                 {plan.popular && (
@@ -148,11 +147,10 @@ export default function PricingSection() {
 
                 <motion.a
                   href="#contact"
-                  className={`w-full py-4 px-6 rounded-lg font-semibold text-center transition-colors duration-200 block ${
-                    plan.popular
+                  className={`w-full py-4 px-6 rounded-lg font-semibold text-center transition-colors duration-200 block ${plan.popular
                       ? 'bg-primary text-primary-foreground hover:bg-primary/90'
                       : 'bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground'
-                  }`}
+                    }`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={(e) => {
