@@ -103,7 +103,7 @@ export default function Navigation() {
                   scrollToSection('#home');
                 }}
               >
-                CoachWeb Pro
+                Sameer Dev
               </a>
             </motion.div>
 
