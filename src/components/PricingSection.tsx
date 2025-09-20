@@ -28,7 +28,7 @@ export default function PricingSection() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$100",
+      price: "PKR 25,000",
       description: "Perfect for new coaches getting started online",
       features: [
         "4-page professional website",
@@ -36,17 +36,17 @@ export default function PricingSection() {
         "Contact form",
         "Social media integration",
         "Ui Animations",
-        "Hosting + Domain setup (extra fee $99 per year) if required.",
+        "Hosting & Domain included (1st year). Renewal charges apply annually",
         "1 month support",
         "Basic SEO setup"
       ],
       popular: false,
       cta: "Get Started",
-      timeline: "1-2 weeks delivery"
+      timeline: "3-5 days delivery"
     },
     {
       name: "Standard",
-      price: "$300",
+      price: "PKR 35,000",
       description: "Most popular choice for established coaches",
       features: [
         "5-page custom website (Home, About, Services, Contact, Blog)",
@@ -58,16 +58,16 @@ export default function PricingSection() {
         "Advanced SEO optimization",
         "3 months support",
         "1 Round of Revisions",
-        "Hosting + Domain setup (extra fee $99 per year) if required.",
+        "Hosting & Domain included (1st year). Renewal charges apply annually",
         "Google Analytics setup"
       ],
       popular: true,
       cta: "Most Popular",
-      timeline: "2-3 weeks delivery"
+      timeline: "5-7 days delivery"
     },
     {
       name: "Premium",
-      price: "$500",
+      price: "PKR 50,000",
       description: "Complete solution for scaling coaching businesses",
       features: [
         "Custom website (Next.js + Tailwind + ShadCN + Framer Motion)",
@@ -76,13 +76,13 @@ export default function PricingSection() {
         "Payment integration (Stripe/PayPal)",
         "Booking system (Calendly, Zoom integration, or custom)",
         "CMS / Content upload (headless CMS or your own panel)",
-        "Monthly maintenance plan (optional $50/month)",
-        "if neccessary, Hosting + Domain setup (extra fee $99 per year) if required. "
+        "Monthly maintenance plan (optional PKR 5,000/month)",
+        "Domain and hosting charges not included in this package.",
 
       ],
       popular: false,
       cta: "Go Premium",
-      timeline: "4-6 weeks delivery"
+      timeline: "10-15 days delivery"
     }
   ];
 

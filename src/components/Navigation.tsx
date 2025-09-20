@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
-
+import website_logo from "../../public/web_logo.png"
+import Image from "next/image";
 const navItems = [
   { name: "Home", href: "#home" },
   { name: "Services", href: "#services" },
@@ -103,7 +104,7 @@ export default function Navigation() {
                   scrollToSection('#home');
                 }}
               >
-                Sameer Dev
+                <Image src={website_logo.src} alt="Website Logo" width={200} height={150} />
               </a>
             </motion.div>
 

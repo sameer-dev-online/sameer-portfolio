@@ -1,7 +1,7 @@
 "use client"
 import { motion, Variants } from "framer-motion";
 import { useState } from "react";
-
+import { FaWhatsapp } from "react-icons/fa";
 interface FormData {
   name: string;
   email: string;
@@ -134,6 +134,13 @@ export default function ContactSection() {
       ),
       href: "mailto:sameer@sameer-dev.online",
     },
+    {
+      name: "WhatsApp",
+      icon: (
+        <FaWhatsapp className="w-6 h-6 text-green-500" />
+      ),
+      href: "https://wa.me/923185014912",
+    },
   ];
 
   return (
@@ -180,6 +187,7 @@ export default function ContactSection() {
                     <p className="text-muted-foreground">sameer@sameer-dev.online</p>
                   </div>
                 </div>
+               
 
                 <div className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border">
                   <div className="p-3 bg-primary/10 rounded-lg">
@@ -190,9 +198,21 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-card-foreground">Response Time</h4>
-                    <p className="text-muted-foreground">Within 24 hours</p>
+                    <p className="text-muted-foreground">Within 2 hours</p>
                   </div>
                 </div>
+
+                {/* WhatsApp Section */}
+                <div className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border">
+                  <div className="p-3 bg-green-500/10 rounded-lg">
+                    <FaWhatsapp className="w-6 h-6 text-green-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-card-foreground">WhatsApp</h4>
+                    <p className="text-muted-foreground">+923185014912</p>
+                  </div>
+                </div>
+
               </div>
 
               {/* Social Links */}

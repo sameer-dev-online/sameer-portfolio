@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-
+import website_logo from "../../public/web_logo.png"
+import Image from "next/image";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -58,7 +59,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-bold gradient-text mb-4">Sameer Dev</h3>
+              <Image src={website_logo.src} alt="Website Logo" className="h-[200px] my[-10px]" width={200} height={100} />
               <p className="text-muted-foreground mb-6 max-w-md">
                 Full-Stack MERN + Next.js Web Developer helping coaches and educators build professional, engaging, and results-driven websites that inspire trust and attract clients.
               </p>

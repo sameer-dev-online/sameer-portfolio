@@ -5,6 +5,7 @@ import { ThemeProvider } from "../components/ThemeProvider";
 import Navigation from "../components/Navigation";
 import Script from "next/script";
 import ClientGTM from "../components/ClientGTM";
+import little_logo from "../../public/little_logo_2.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,6 +22,10 @@ export const metadata: Metadata = {
   title: {
     default: "Sameer Dev | Professional Websites for Coaches & Trainers",
     template: "%s | Sameer Dev"
+  },
+   icons: {
+    icon: little_logo.src,
+    
   },
   description: "Transform your coaching business with a professional website. We specialize in creating conversion-focused websites for coaches and trainers that attract more clients and grow revenue.",
   keywords: [
@@ -82,7 +87,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
          {/* GTM Script */}
-
       <Script
         id="gtm-loader"
         strategy="beforeInteractive"
@@ -98,7 +102,7 @@ export default function RootLayout({
       />
         <meta name="theme-color" content="#2563eb" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={little_logo.src} />
       </head>
       
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
