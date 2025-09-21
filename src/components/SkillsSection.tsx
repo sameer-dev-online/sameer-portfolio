@@ -113,7 +113,7 @@ export default function TestimonialsSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.00 }}
           className="text-center mb-16"
         >
           <motion.h2

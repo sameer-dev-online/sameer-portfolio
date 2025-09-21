@@ -90,7 +90,7 @@ export default function HomeSection() {
         initial="hidden"
         animate="visible"
       >
-        {/* Business Visual */}
+        {/* Business Visual
         <motion.div variants={itemVariants} className="mb-8">
           <div className="flex justify-center items-center gap-4 mb-6">
             <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
@@ -105,12 +105,12 @@ export default function HomeSection() {
               <span className="text-2xl">🚀</span>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Main Heading */}
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight"
+          className="text-4xl sm:text-5xl md:text-7xl pt-[100px] font-bold mb-6 leading-tight"
         >
           Transform Your Coaching Business with a{" "}
           <span className="gradient-text">Professional Website</span>

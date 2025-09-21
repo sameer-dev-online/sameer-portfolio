@@ -66,20 +66,25 @@ export default function Navigation() {
   }, [isMobileMenuOpen]);
 
   const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.substring(1));
-    if (element) {
-      // Calculate offset for fixed navigation
-      const navHeight = 64; // h-16 = 64px
+  const element = document.getElementById(href.substring(1));
+  if (element) {
+    // pehle mobile menu band karo
+    setIsMobileMenuOpen(false);
+
+    // thoda chhota delay, taki menu close ke baad scroll execute ho
+    setTimeout(() => {
+      const navHeight = 64; // fixed nav ka height
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - navHeight;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
-    }
-    setIsMobileMenuOpen(false);
-  };
+    }, 300); // 0.3s delay
+  }
+};
+
 
   return (
     <>

@@ -93,7 +93,7 @@ export default function PricingSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.00 }}
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
