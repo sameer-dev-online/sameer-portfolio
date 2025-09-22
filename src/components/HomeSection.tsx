@@ -90,22 +90,6 @@ export default function HomeSection() {
         initial="hidden"
         animate="visible"
       >
-        {/* Business Visual
-        <motion.div variants={itemVariants} className="mb-8">
-          <div className="flex justify-center items-center gap-4 mb-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
-              <span className="text-2xl">🎯</span>
-            </div>
-            <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary p-[2px] rounded-full">
-              <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                <div className="text-3xl font-bold gradient-text">CWP</div>
-              </div>
-            </div>
-            <div className="w-16 h-16 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-full flex items-center justify-center">
-              <span className="text-2xl">🚀</span>
-            </div>
-          </div>
-        </motion.div> */}
 
         {/* Main Heading */}
         <motion.h1

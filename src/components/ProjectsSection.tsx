@@ -1,11 +1,8 @@
 "use client"
 import { motion } from "framer-motion";
 import { useState } from "react";
-import portfolioImage from "../../public/sameer-portfolio-image.png";
-import megaMallImage from "../../public/mega-mall-image.png";
-import trueFeedbackImage from "../../public/true-feedback-image.png"
+import coaching_ss from "../../public/coaching_ss.png";
 import Image from "next/image";
-import Link from "next/link";
 
 interface Project {
   title: string;
@@ -22,40 +19,16 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Sarah's Life Coaching Website",
-    description: "Complete website transformation for a life coach, including booking system and client portal.",
-    longDescription: "Sarah was struggling to attract clients with her outdated website. We created a modern, conversion-focused site with integrated booking system. Result: 300% increase in client bookings within 3 months.",
-    image: portfolioImage.src,
+    description: "A modern, responsive portfolio website for a professional life coach built with Next.js, TypeScript, and Tailwind CSS.",
+    longDescription: "Sarah was struggling to attract clients with her outdated website. We created a modern, conversion-focused site. Result: 300% increase in client bookings within 3 months.",
+    image: coaching_ss.src,
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Booking System"],
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://sarah-johnson-sigma.vercel.app/",
+    githubLink: "https://github.com/sameer-dev-online/sarah_coach",
     category: "Life Coaching",
     featured: true,
   },
-  {
-    title: "Peak Performance Fitness Coaching",
-    description: "Professional website for a fitness trainer with client management and progress tracking features.",
-    longDescription: "Michael needed a website that could showcase his expertise and manage his growing client base. We built a comprehensive platform with client portals, progress tracking, and automated scheduling. His revenue doubled within 6 months.",
-    image: megaMallImage.src,
-    technologies: ["React", "Node.js", "MongoDB", "Payment Integration"],
-    liveLink: "#",
-    githubLink: "#",
-    category: "Fitness Coaching",
-    featured: true,
-  },
-
-  {
-    title: "Executive Leadership Coaching Platform",
-    description: "Premium website for executive coaching with advanced client management and assessment tools.",
-    longDescription: "James wanted to position himself as a premium executive coach. We created a sophisticated platform with assessment tools, client dashboards, and premium branding. He now attracts Fortune 500 clients regularly.",
-    image: trueFeedbackImage.src,
-    technologies: ["Next.js", "TypeScript", "Advanced Analytics", "Client Portal"],
-    liveLink: "#",
-    githubLink: "#",
-    category: "Executive Coaching",
-    featured: true,
-  },
-
-
+  
 ];
 
 const categories = ["All", "Life Coaching", "Fitness Coaching", "Business Coaching", "Executive Coaching"];
@@ -94,7 +67,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="pt-15 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -105,16 +78,16 @@ export default function ProjectsSection() {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              Success <span className="gradient-text">Case Studies</span>
+              Demo <span className="gradient-text">Projects</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Real results from coaches and trainers who transformed their businesses with our websites
+              Check out some of our latest projects and see how we can help you grow your business.
             </p>
           </motion.div>
 
           {/* Featured Case Studies */}
           <motion.div variants={itemVariants} className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Client Transformations</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center">Featured Projects</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredProjects.map((project, index) => (
                 <motion.div
@@ -223,7 +196,7 @@ export default function ProjectsSection() {
                           document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                         }}
                       >
-                        Get Similar Results
+                        Get Free Consultation
                       </motion.a>
                     </div>
                   </div>
@@ -233,6 +206,7 @@ export default function ProjectsSection() {
           </motion.div>
         </motion.div>
       </div>
+      <div className="text-center " > More Projects coming soon...</div>
     </section>
   );
 }

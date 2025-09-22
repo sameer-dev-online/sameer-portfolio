@@ -7,9 +7,7 @@ import ProjectsSection from "../components/ProjectsSection";
 import PricingSection from "../components/PricingSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
-import Script from "next/script";
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+
 
 export default function Home() {
 
@@ -22,7 +20,7 @@ export default function Home() {
         <ServicesSection />
         <WhyCoachesSection />
         <TestimonialsSection />
-        {/* <ProjectsSection /> */}
+        <ProjectsSection />
         <PricingSection />
         <ContactSection />
         <Footer />
