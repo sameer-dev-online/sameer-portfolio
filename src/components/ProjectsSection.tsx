@@ -187,6 +187,16 @@ export default function ProjectsSection() {
                     </div>
                     <div className="w-full text-center p-[20px]">
                       <motion.a
+                        href="https://sarah-johnson-sigma.vercel.app/"
+                        target="_blank"
+                        className="px-6 py-1 my-3 bg-black text-primary-foreground rounded-lg border-1 font-semibold text-lg hover:bg-primary/90 transition-colors duration-200 shadow-lg hover:shadow-xl inline-block"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+
+                      >
+                        Preview
+                      </motion.a>
+                      <motion.a
                         href="#contact"
                         className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors duration-200 shadow-lg hover:shadow-xl inline-block"
                         whileHover={{ scale: 1.05 }}

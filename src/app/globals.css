@@ -37,7 +37,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground); /* yeh missing tha */
   --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-border: var(--border);
@@ -53,7 +55,7 @@
   --popover: #0f172a;
   --popover-foreground: #f8fafc;
   --primary: #3b82f6;
-  --primary-foreground: #0f172a;
+  --primary-foreground: #f8fafc;
   --secondary: #1e293b;
   --secondary-foreground: #f8fafc;
   --muted: #1e293b;
