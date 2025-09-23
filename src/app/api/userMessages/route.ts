@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  const { name, email, message } = body;
+  const { name, email, message, whatsapp } = body;
   if (!name || !email || !message) {
     return NextResponse.json({
       success: false,
@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
       from: "messages@sameer-dev.online",
       to: "sameer@sameer-dev.online",
       subject: "New Contact Request from Portfolio",
-      react: EmailTemplate({ name, email, message }),
+      react: EmailTemplate({ name, email, message, whatsapp }),
     });
 
     if (error) {

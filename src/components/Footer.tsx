@@ -170,7 +170,7 @@ export default function Footer() {
               >
                 ❤️
               </motion.span>
-              <span>by Sameer</span>
+              <span>by Sameer Dev</span>
             </div>
           </div>
         </motion.div>

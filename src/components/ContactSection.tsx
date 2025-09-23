@@ -5,12 +5,14 @@ import { FaWhatsapp } from "react-icons/fa";
 interface FormData {
   name: string;
   email: string;
+  whatsapp: string;
   message: string;
 }
 
 interface FormErrors {
   name?: string;
   email?: string;
+  whatsapp?: string;
   message?: string;
 }
 
@@ -19,6 +21,7 @@ export default function ContactSection() {
     name: "",
     email: "",
     message: "",
+    whatsapp: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -70,7 +73,7 @@ export default function ContactSection() {
       }
 
       // Reset form on success
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", message: "", whatsapp: "" });
       setSubmitStatus('success');
     } catch (error) {
 
@@ -307,12 +310,35 @@ export default function ContactSection() {
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-lg border transition-colors duration-200 bg-background text-foreground ${errors.email
                         ? 'border-red-300 focus:border-red-500 focus:ring-red-500'
+
                         : 'border-border focus:border-primary focus:ring-primary'
                       } focus:outline-none focus:ring-2 focus:ring-opacity-50`}
-                    placeholder="your.email@example.com"
+                    placeholder="Your email address."
                   />
                   {errors.email && (
                     <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="whatsapp" className="block text-sm font-medium text-card-foreground mb-2">
+                    WhatsApp *
+                  </label>
+                  <input
+                    type="text"
+                    id="whatsapp"
+                    name="whatsapp"
+                    value={formData.whatsapp}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-3 rounded-lg border transition-colors duration-200 bg-background text-foreground ${errors.whatsapp
+                        ? 'border-red-300 focus:border-red-500 focus:ring-red-500'
+
+                        : 'border-border focus:border-primary focus:ring-primary'
+                      } focus:outline-none focus:ring-2 focus:ring-opacity-50`}
+                    placeholder="Your WhatsApp number"
+                  />
+                  {errors.whatsapp && (
+                    <p className="text-red-500 text-sm mt-1">{errors.whatsapp}</p>
                   )}
                 </div>
 
