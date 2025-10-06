@@ -1,7 +1,35 @@
 "use client"
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function PricingSection() {
+  const [starterPrice, setStarterPrice] = useState<number>(100);
+  const [standardPrice, setStandardPrice] = useState<number>(200);
+  const [premiumPrice, setPremiumPrice] = useState<number>(500);
+  const [starterPkrPrice, setStarterPkrPrice] = useState<string>("25,000");
+  const [standardPkrPrice, setStandardPkrPrice] = useState<string>("35,000");
+  const [premiumPkrPrice, setPremiumPkrPrice] = useState<string>("50,000");
+  const [currency, setCurrency] = useState<string>("PKR");
+useEffect(() => {
+  (async()=> {
+     const res = await fetch('/api/location');
+     const data = await res.json();
+     setCurrency(data?.currency);
+  })()
+},[]);
+  // useEffect(() => {
+  //   (async () => {
+  //     const res = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json`);
+  //     const data= await res.json(); 
+  //     console.log(data.usd.pkr);
+  //     setStarterPkrPrice(Math.round(data.usd.pkr * starterPrice));
+  //     setStandardPkrPrice(Math.round(data.usd.pkr * standardPrice));
+  //     setPremiumPkrPrice(Math.round(data.usd.pkr * premiumPrice));
+      
+  //   })(); 
+  // }, [currency, starterPrice, standardPrice, premiumPrice]);
+
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -28,7 +56,7 @@ export default function PricingSection() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "PKR 25,000",
+      price: currency === "PKR" ? `PKR ${starterPkrPrice}` : `$${starterPrice}`,
       description: "Perfect for new coaches getting started online",
       features: [
         "4-page professional website",
@@ -46,7 +74,7 @@ export default function PricingSection() {
     },
     {
       name: "Standard",
-      price: "PKR 35,000",
+      price: currency === "PKR" ? `PKR ${standardPkrPrice}` : `$${standardPrice}`,
       description: "Most popular choice for established coaches",
       features: [
         "5-page custom website (Home, About, Services, Contact, Blog)",
@@ -67,7 +95,7 @@ export default function PricingSection() {
     },
     {
       name: "Premium",
-      price: "PKR 50,000",
+      price: currency === "PKR" ? `PKR ${premiumPkrPrice}` : `$${premiumPrice}`,
       description: "Complete solution for scaling coaching businesses",
       features: [
         "Custom website (Next.js + Tailwind + ShadCN + Framer Motion)",
@@ -76,7 +104,7 @@ export default function PricingSection() {
         "Payment integration (Stripe/PayPal)",
         "Booking system (Calendly, Zoom integration, or custom)",
         "CMS / Content upload (headless CMS or your own panel)",
-        "Monthly maintenance plan (optional PKR 5,000/month)",
+        "Monthly maintenance plan (optional $50/month)",
         "Domain and hosting charges not included in this package.",
 
       ],
