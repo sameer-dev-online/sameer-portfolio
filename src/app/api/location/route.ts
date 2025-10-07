@@ -13,9 +13,9 @@ export async function GET(request: NextRequest) {
   const data = await res.json();
   // console.log(data);
    return NextResponse.json({
-    ip: data?.ip || realIp,
-    country: data?.country || "Pakistan",
-    city: data?.city || "Unknown",
-    currency: data?.currency?.code || "PKR",
+    ip:   data?.data?.ip || realIp,
+    country: data?.data?.country || "Pakistan",
+    city: data?.data?.city || "Unknown",
+    currency: data?.data?.currency?.code || "PKR",
   });
 }
