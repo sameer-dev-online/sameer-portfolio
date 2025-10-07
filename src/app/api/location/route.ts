@@ -8,12 +8,14 @@ export async function GET(request: NextRequest) {
     request.headers.get('x-real-ip') ||
     request.headers.get('cf-connecting-ip') ||
     'unknown';
-    console.log(realIp);
-  const res = await fetch(`https://ipapi.co/${realIp}/json/`);
+    // console.log(realIp);
+  const res = await fetch(`https://api.ipwho.org/ip/${realIp}`);
   const data = await res.json();
-  return NextResponse.json({
-    ip: realIp,
-    country: data.country_name || "Pakistan",
-    currency: data.currency || "PKR"
+  // console.log(data);
+   return NextResponse.json({
+    ip: data?.ip || realIp,
+    country: data?.country || "Pakistan",
+    city: data?.city || "Unknown",
+    currency: data?.currency?.code || "PKR",
   });
 }
